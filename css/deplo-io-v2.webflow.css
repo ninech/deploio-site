@@ -1102,6 +1102,7 @@ figcaption {
   order: 0;
   flex: 0 auto;
   text-align: center;
+  padding-bottom: 12px;
 }
 
 .image {

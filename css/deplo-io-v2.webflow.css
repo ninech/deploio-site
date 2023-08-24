@@ -947,17 +947,17 @@ figcaption {
 }
 
 .home-content-wrap {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .section-heading {
-  margin-top: 63px;
+  margin-top: 30px;
   margin-bottom: 20px;
   font-weight: 400;
 }
 
 .about-grid {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   align-items: center;
   grid-column-gap: 80px;
   grid-row-gap: 30px;
@@ -1292,7 +1292,7 @@ figcaption {
   }
 
   .about-grid {
-    grid-row-gap: 50px;
+    grid-row-gap: 30px;
         grid-template-areas: "."
       ".";
     -ms-grid-columns: 1fr;

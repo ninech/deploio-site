@@ -1,15 +1,241 @@
 .image-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
+    margin: 10px auto 30px;
 }
 
 .image-container img {
-    margin-bottom: 50px;
-    width: 50%;
+    margin-bottom: 10px;
+    width: 40%;
     height: auto;
-    max-width: 350px;
+    max-width: 200px;
+}
+
+.image-container-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: -5px auto 5px;
+}
+
+.image-container-footer img {
+    margin: 0 20px;
+    max-width: 180px;
+}
+
+.image-container-footer-2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-container-footer-2 img {
+    margin: 0 20px;
+    padding-left: 10px;
+    max-width: 100px;
+}
+
+.padding-left {
+    padding-left: 10px;
+}
+
+.trial-button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.contact-button-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+hr {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.footer-1 {
+    background-color: #0f163b;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+.footer-2 {
+    background-color: #0a0f26;
+    padding: 30px 0 30px 0;
+}
+
+.footer-wrapper-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-1-background {
+    width: 100vw;
+    height: 100%;
+    background-color: #1a1a1a;
+}
+
+.footer-column {
+    flex: 1 0 15%;
+    margin: 1em;
+}
+
+.footer-column-heading {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+}
+
+.footer-link:hover {
+    font-weight: normal;
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-link img {
+    padding-bottom: 1em;
+    margin: 0 0.3em;
+    width: 100px;
+}
+
+.footer-address {
+    line-height: 26px;
+    margin-top: 20px;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.footer-wrapper-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-wrapper-2-links {
+    display: flex;
+}
+
+.footer-wrapper-2-links a {
+    margin: 0 2em;
+    min-width: 150px;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    justify-content: flex-end;
+    text-align: end;
+}
+
+.footer-wrapper-2-links a:hover {
+    font-weight: normal;
+    color: white;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 991px) {
+    .footer-column {
+        flex: 1 0 15%;
+    }
+
+    .footer-1 {
+        margin-top: 0;
+    }
+
+    .footer-wrapper-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-container-footer-2 {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-button-wrapper {
+        justify-content: center;
+    }
+
+    .list-override {
+        text-align: start;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer-column {
+        flex: 1 0 31%;
+    }
+
+    .trial-button-wrapper {
+        justify-content: center;
+    }
+
+    .image-container-footer img {
+        width: 90%;
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .footer-wrapper-1 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-column {
+        flex: 1 0 45%;
+    }
+
+    .footer-column-heading {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .footer-column ul a {
+        font-size: 14px;
+    }
+
+    .footer-wrapper-1 {
+        font-size: 14px;
+    }
+
+    .footer-wrapper-2 {
+        font-size: 14px;
+    }
+
+    .footer-wrapper-2-links {
+        flex-direction: column;
+    }
+
+    .footer-wrapper-2-links a {
+        text-align: center;
+    }
+
+    .image-container-footer,
+    .image-container-footer-2 {
+        flex-direction: column;
+    }
 }

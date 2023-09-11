@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <!-- thanks for having a look at our source code :) -->
+  <title>deplo.io - Seamless App Deployment with Scalability and Reliability</title>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZRMSRQERR"></script>
   <script>
@@ -10,10 +14,38 @@
 
     gtag('config', 'G-SZRMSRQERR');
   </script>
-  <meta charset="utf-8">
+  <!--  'Get in touch!' script for 'Thank you' message-->
+  <script>
+    window.addEventListener('load', function() {
+      const form = document.getElementById('form-container');
+      const contactWrapper = document.getElementById('contact-wrapper');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = e.target.action;
+        fetch(action, {
+          method: 'POST',
+          body: data,
+        })
+        .then(() => {
+          contactWrapper.innerHTML = '<div id="thank-you-message">\n' +
+                  '          <h2>Thank you!</h2>\n' +
+                  '          <p>Your message has been sent.</p>\n' +
+                  '        </div>';
+        })
+      })
+    })
 
-  <!-- thanks for having a look at our source code :) -->
-  <title>deplo.io - Seamless App Deployment with Scalability and Reliability</title>
+    // Script for hitting enter to submit
+    const emailInputField = document.querySelector('input[name="Email"]');
+
+    emailInputField.addEventListener('keyup', function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.querySelector('button[type="submit"]').click();
+      }
+    })
+  </script>
 
   <!-- Opengraph meta -->
   <meta property="og:title" content="Seamless App Deployment with Scalability and Reliability">
@@ -104,28 +136,28 @@
             <div>
               <h2 class="section-heading">Why deplo.io?</h2>
               <p class="paragraph-light">deplo.io simplifies the deployment and management of applications. It offers a lightweight and scalable environment for your app to run smoothly. With deplo.io, deploying and managing your applications is hassle-free. It&#x27;s the perfect platform for developers and businesses in Switzerland.</p>
-              <div class="contact-button-wrapper">
-                <form action="https://formspree.io/f/mvojanzp" method="POST" id="form-container">
-                  <label>
-                    Name:
-                    <input name="name">
-                  </label>
-                  <label>
-                    Email:
-                    <input type="email" name="email">
-                  </label>
-                  <label>
-                    Message:
-                    <textarea name="message"></textarea>
-                  </label>
-                  <button type="submit" class="button-2 pulse w-button">Get in touch</button>
-                </form>
-<!--                <a href="https://www.nine.ch/en/en/contactus-deploio" target="_blank" class="button-2 pulse w-button" aria-label="Contact us">Contact us</a>-->
-              </div>
             </div>
           </div>
           <img src="images/Cloud4.png" id="w-node-_86e64837-0616-515b-4568-76c147234d4c-023fd866" sizes="(max-width: 479px) 94vw, (max-width: 767px) 96vw, 94vw" srcset="images/Cloud4-p-500.png 500w, images/Cloud4-p-800.png 800w, images/Cloud4-p-1080.png 1080w, images/Cloud4-p-1600.png 1600w, images/Cloud4.png 1664w" alt="">
         </div>
+        <hr>
+        <div id="contact-wrapper">
+          <h2 class="section-heading">Get in touch!</h2>
+          <form
+                  method="POST"
+                  action="https://script.google.com/macros/s/AKfycbwT1lwiqSW1clYKkuHFrjcXYyjpZD-mreglv8ZvKqP7e-HrTPE3YPPno6zEOtuKAysKbw/exec"
+                  id="form-container"
+          >
+            <input name="Email" type="email" placeholder="Email" required>
+            <button type="submit" class="button-2 pulse w-button">Send</button>
+          </form>
+        </div>
+
+        <div id="thank-you-message" style="display: none">
+          <h2>Thank you!</h2>
+          <p>Your message has been sent.</p>
+        </div>
+
       </div>
     </div>
   </div>

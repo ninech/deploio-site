@@ -45,16 +45,48 @@
     display: flex;
     justify-content: start;
     align-items: center;
-}
-
-.contact-button-wrapper {
-    display: flex;
-    justify-content: start;
-    align-items: center;
+    margin-top: 16px;
 }
 
 hr {
     border-color: rgba(255,255,255,0.2);
+}
+
+#contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin-top: 16px;
+    width: 50%;
+    display: flex;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: 100%;
+    height: 50px;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 6px 12px 16px;
+    resize: vertical;
+    background-color: white;
+    color: #0a0f26; /* This will make the typed text dark blue */
+}
+
+form label {
+    color: white; /* This will make the labels white */
+}
+
+#thank-you-message {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 0;
 }
 
 .footer-1 {
@@ -173,10 +205,6 @@ hr {
         text-align: center;
     }
 
-    .contact-button-wrapper {
-        justify-content: center;
-    }
-
     .list-override {
         text-align: start;
         padding-right: 10px;
@@ -184,6 +212,16 @@ hr {
 }
 
 @media screen and (max-width: 767px) {
+    form {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-2 {
+        width: 50%;
+    }
+
     .footer-column {
         flex: 1 0 31%;
     }

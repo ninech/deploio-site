@@ -954,10 +954,11 @@ figcaption {
   margin-top: 30px;
   margin-bottom: 20px;
   font-weight: 400;
+  text-align: center;
 }
 
 .about-grid {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   align-items: center;
   grid-column-gap: 80px;
   grid-row-gap: 30px;
@@ -1045,7 +1046,8 @@ figcaption {
 }
 
 .button-2 {
-  margin-top: 16px;
+  height: 50px;
+  margin-top: 6px;
   margin-bottom: 16px;
   border-radius: 20px;
   background-color: #fff;

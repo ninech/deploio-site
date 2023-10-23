@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <title>Deplo.io</title>
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+    <meta charset="UTF-8">
+    <!-- Opengraph meta -->
+    <meta property="og:title" content="Seamless App Deployment with Scalability and Reliability">
+    <meta property="og:image" content="https://deplo.io/meta/deploio-preview.png" name="image">
+    <meta property="og:description" name="description"
+          content="deplo.io simplifies app deployment and management, providing a flexible and user-friendly platform to harness the full potential of advanced technology. Set up your apps with ease, like a tipi - lightweight and scalable - ensuring a perfect home for your app.">
+
+    <!-- Twitter meta -->
+    <meta name="twitter:site" content="@nine_ch">
+    <meta name="twitter:creator" content="@nine_ch">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Seamless App Deployment with Scalability and Reliability">
+    <meta name="twitter:image" content="https://deplo.io/meta/deploio-preview.png">
+    <meta name="twitter:url" content="https://deplo.io/">
+    <meta name="twitter:description" content="Lightweight, Scalable, and Effortless App Deployment &amp; Management">
+
+    <!-- Mobile Specific Metas -->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Nine Internet Solutions AG" name="author">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/meta/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- css, fonts & js-->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                "gtm.start": new Date().getTime(),
+                event: "gtm.js",
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-MHQPVQD4");
+    </script>
+    <!-- End Google Tag Manager -->
+    <script>
+        window.addEventListener('load', function () {
+            const form = document.getElementById('form-container');
+            const contactWrapper = document.getElementById('contact-wrapper');
+            const thankYouMessageTemplate = document.getElementById('thank-you-message-template');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const action = e.target.action;
+                fetch(action, {
+                    method: 'POST',
+                    body: data,
+                })
+                    .then(() => {
+                        form.remove();
+                        contactWrapper.appendChild(thankYouMessageTemplate.content.cloneNode(true));
+                    })
+            })
+        })
+
+        // Script for hitting enter to submit
+        const emailInputField = document.querySelector('input[name="Email"]');
+
+        emailInputField.addEventListener('keyup', function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.querySelector('button[type="submit"]').click();
+            }
+        })
+    </script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript
+>
+    <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MHQPVQD4"
+            height="0"
+            width="0"
+            style="display: none; visibility: hidden"
+    ></iframe
+    >
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+    <nav class="reduced-width columns align-center keep-columns">
+        <a
+                href="https://www.nine.ch/en/en/contactus-deploio"
+                class="btn btn-lg bg-primary"
+        >Jetzt Testen</a>
+        <div>
+            <a
+                    href="https://cockpit.nine.ch/de/session/new?origin=%2F"
+                    target="_blank"
+                    class="btn btn-sm bg-gradient"
+            >Sign In</a
+            >
+            <a
+                    href="#contact-wrapper"
+                    class="btn btn-sm bg-gradient"
+            >Sign Up</a
+            >
+        </div>
+    </nav>
+</header>
+<article>
+    <div class="section-introduction reduced-width">
+        <img
+                class="deploio-logo"
+                src="./assets/images/deploio_wave_logo.png"
+                alt="deploio logo"
+        >
+        <h1>Der Turbo für dein App Hosting</h1>
+        <a href="https://www.swissmadesoftware.org/home.html">
+            <img
+                    class="swiss-logo"
+                    src="assets/images/swiss.png"
+                    alt="swiss made software, swiss hosting"
+            >
+        </a>
+        <div>
+        </div>
+    </div>
+    <div class="section-tech columns reduced-width">
+        <section class="column">
+            <h2>Unterstützte Technologien</h2>
+            <ul class="tech-grid">
+                <li class="card">
+                    <img
+                            src="./assets/images/language_ruby.png"
+                            alt="Ruby"
+                    >
+                </li>
+                <li class="card">
+                    <img
+                            src="./assets/images/language_django.png"
+                            alt="Django"
+                    >
+                </li>
+                <li class="card">
+                    <img
+                            src="./assets/images/language_python.png"
+                            alt="Python"
+                    >
+                </li>
+                <li class="card">
+                    <img
+                            src="./assets/images/language_go.png"
+                            alt="Go"
+                    >
+                </li>
+                <li class="card">
+                    <img
+                            src="./assets/images/language_php.png"
+                            alt="PHP"
+                    >
+                </li>
+                <li class="card">
+                    <img
+                            src="./assets/images/language_node.png"
+                            alt="NodeJS"
+                    >
+                </li>
+            </ul>
+        </section>
+        <section class="section-convenience column">
+            <h2>Deploio macht das Leben einfacher!</h2>
+            <p>
+                Als zukunftsweisende
+                <strong>App-Engine</strong> vereinfachen wir den Einsatz
+                und die Verwaltung deiner Webanwendungen. Verabschiede
+                dich von technischen Komplikationen und fokussiere dich
+                auf das, was du am besten kannst:
+            </p>
+            <p>Atemberaubende Anwendungen erstellen.</p>
+            <h2>Platform-as-a-Service (PaaS)</h2>
+            <p>
+                Unsere Plattform integriert sich nahtlos in deine
+                bestehenden Workflows und bietet dir eine einfache
+                Bereitstellung, Skalierbarkeit, vielseitiges Management
+                und vieles mehr. Alles auf einer sicher gehosteten
+                Schweizer Plattform.
+            </p>
+        </section>
+    </div>
+    <div class="section-recommendations columns reduced-width">
+        <section class="column">
+            <h2 class="seo">Empfehlungen</h2>
+            <ul class="col list">
+                <li>
+                    <h3>Einfache Bereitstellung</h3>
+                    <p>Mit einigen Klicks ist deine Anwendung bereit.</p>
+                </li>
+
+                <li>
+                    <h3>Swiss Data Center Hosting</h3>
+                    <p>
+                        Deploio ist keine US-Cloud mit Schweizer
+                        Standort.
+                    </p>
+                </li>
+
+                <li>
+                    <h3>Zusatzdienste</h3>
+                    <p>Wie Managed Database und KeyDB für deine App.</p>
+                </li>
+
+                <li>
+                    <h3>Developer-Friendly</h3>
+                    <p>Mehr Code, weniger Infrastruktur-Sorgen.</p>
+                </li>
+            </ul>
+            <a
+                    href="https://github.com/ninech/deploio-examples"
+                    class="btn btn-secondary btn-lg"
+            >Mehr Erfahren</a
+            >
+        </section>
+        <section
+                class="section-certificate column certificate-container"
+        >
+            <h2 class="seo">Zertifizierung</h2>
+            <div class="hosted-on-deploio-logo"></div>
+            <img
+                    class="hosted-on-deploio-logo"
+                    src="assets/images/deploio2_wave_logo.png"
+                    alt="hosted on deplo.io"
+            >
+            <div class="certificate bg-primary columns keep-columns">
+                <div class="center">
+                    <img
+                            src="assets/images/Iso_certificate.png"
+                            alt=""
+                    >
+                </div>
+                <p class="column">
+                    Wir würden euch nicht empfehlen, sich auf
+                    Zertifikate zu verlassen, aber ihr könnt es: Deploio
+                    ist.
+                    <strong>ISO 27001 zertifiziert.</strong>
+                </p>
+            </div>
+        </section>
+    </div>
+    <section class="section-comparison reduced-width">
+        <h2 class="seo">Comparison table</h2>
+        <img src="assets/images/comparison_table.png" alt="comparison table">
+    </section>
+    <section id="contact-wrapper" class="section-contact reduced-width">
+        <h2 class="section-heading">Kontakt aufnehmen / Beta-Zugang beantragen </h2>
+        <form
+                method="POST"
+                action="https://script.google.com/macros/s/AKfycbwT1lwiqSW1clYKkuHFrjcXYyjpZD-mreglv8ZvKqP7e-HrTPE3YPPno6zEOtuKAysKbw/exec"
+                id="form-container"
+                class="center"
+        >
+            <input name="Email" type="email" placeholder="Email" required>
+            <button type="submit" class="button-2 btn btn-lg bg-primary">Senden</button>
+        </form>
+        <template id="thank-you-message-template">
+            <div id="thank-you-message">
+                <h2>Vielen Dank!</h2>
+                <p>Ihre Nachricht wurde abgesendet.</p>
+            </div>
+        </template>
+    </section>
+    <section class="section-support full-width">
+        <div class="reduced-width columns">
+            <div class="column"></div>
+            <div class="column text-center">
+                <h2>Wieso Deploio perfekt ist für die Schweiz?</h2>
+                <p>
+                    Deploio ist echte Schweizer Qualität und zu 100% in
+                    CH–Eigentum. Für Entwickler und Firmen, die
+                    Präzision, Sicherheit und Konformität suchen – mit
+                    Root Server im selben Netz und 24/7 Support.
+                </p>
+            </div>
+        </div>
+    </section>
+</article>
+<footer class="text-dim">
+    <div class="footer-top bg-primary">
+        <div class="columns reduced-width">
+            <div class="column">
+                <h3>Support</h3>
+                <ul>
+                    <li>
+                        <a href="https://status.nine.ch/">Status</a>
+                    </li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Slack Community</a></li>
+                    <li><a href="#">Github Example</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="#">Nine Internet Solutions AG</a></li>
+                    <li><a href="#">Badenerstrasse 47</a></li>
+                    <li><a href="#">8004 Zürich</a></li>
+                    <li><a href="#">Schweiz</a></li>
+                    <li><a href="#">info@nine.ch</a></li>
+                    <li><a href="#">+41 44 637 40 40</a></li>
+                </ul>
+            </div>
+            <div class="column footer-certifications">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>
+                        <a href="#"><img class="footer-certificate" src="assets/images/Co2_Certificate.svg" alt="co2 certificate"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="footer-certificate" src="assets/images/2013.png" alt="2013 certificate"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="footer-certificate" src="assets/images/2015.png" alt="2015 certificate"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column footer-socials">
+                <h3>Get Social</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/deploio/">
+                        <img src="assets/images/socials/facebook.svg" alt="deplo.io facebook">
+                    </a></li>
+                    <li><a href="https://www.instagram.com/deploio/">
+                        <img src="assets/images/socials/instagram.svg" alt="deplo.io instagram">
+                    </a></li>
+                    <li><a href="https://www.reddit.com/deploio">
+                        <img src="assets/images/socials/reddit.svg" alt="deplo.io reddit">
+                    </a></li>
+                    <li><a href="https://www.twitter.com/deploio">
+                        <img src="assets/images/socials/twitter.svg" alt="deplo.io twitter">
+                    </a></li>
+                </ul>
+            </div>
+            <div class="column footer-providers">
+                <h3>Service Provided By</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.nine.ch">
+                            <img
+                                    src="assets/images/nine-Logo.png"
+                                    alt="nine"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.renuo.ch">
+                            <img
+                                    src="assets/images/Renuo-Logo.png"
+                                    alt="renuo"
+                            >
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom bg-secondary">
+        <div class="reduced-width columns">
+            <div class="column center copyright">
+                Copyright © 2023 Nine Internet Solutions AG
+            </div>
+            <div>
+                <a href="https://docs.nine.ch/de/docs/legal-documents/general-terms-and-conditions">Terms & Conditions</a>
+                <a href="https://www.nine.ch/de/privacy-policy">Privacy policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+<svg width="16.994792px" height="34.9895827px" viewBox="0 0 16.994792 34.9895827" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <polygon id="path-0z7qcwo32e-1" points="0 0 16.994792 0 16.994792 34.9895827 0 34.9895827"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Social-Icons" transform="translate(-9.2812, 0)">
+            <g id="Clipped" transform="translate(9.2812, 0)">
+                <mask id="mask-0z7qcwo32e-2" fill="white">
+                    <use xlink:href="#path-0z7qcwo32e-1"></use>
+                </mask>
+                <g id="Path"></g>
+                <path d="M13.0781253,5.79687467 L17,5.79687467 L17,0.0468746667 L11.989584,0.0468746667 L11.989584,0.067708 C5.40625067,0.296874667 4.057292,3.89062533 3.93750133,7.682292 L3.921876,7.682292 L3.921876,11.677084 L0.00520933333,11.677084 L0.00520933333,17.432292 L3.921876,17.432292 L3.921876,34.942708 L10.9583333,34.942708 L10.9583333,17.432292 L16.0052093,17.432292 L17,11.677084 L10.9583333,11.677084 L10.9583333,8.10416667 C10.9583333,6.83333333 11.8333333,5.79687467 13.0781253,5.79687467 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-0z7qcwo32e-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

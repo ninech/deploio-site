@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "color-no-invalid-hex": true
+  },
+  "overrides": [
+    {
+      "files": ["*.scss", "**/*.scss"],
+      "customSyntax": "postcss-scss"
+    },
+    {
+      "files": ["components/**/*.css", "pages/**/*.css"],
+      "rules": {
+      }
+    }
+  ]
+}

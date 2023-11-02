@@ -229,6 +229,7 @@ form input[type=email] {
 }
 form button {
   border: none;
+  cursor: pointer;
 }
 
 #thank-you-message {

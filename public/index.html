@@ -109,11 +109,16 @@
     <script>
         window.addEventListener("load", function () {
             const form = document.getElementById("form-container");
-            const contactWrapper =
-                document.getElementById("contact-wrapper");
-            const thankYouMessageTemplate = document.getElementById(
-                "thank-you-message-template"
-            );
+            const contactWrapper = document.getElementById("contact-wrapper");
+            const formUpwards = document.getElementById("form-upwards");
+            const thankYouMessageTemplate = document.getElementById("thank-you-message-template");
+
+            // if parameter subscribe is set, move the contactWrapper within the formUpwards
+            if (window.location.search.includes("subscribe")) {
+                document.querySelector('header').style.display = 'none';
+                formUpwards.appendChild(contactWrapper);
+            }
+
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
                 const data = new FormData(form);
@@ -172,6 +177,8 @@
                 alt="deploio logo"
         />
         <h1>Der Turbo für dein App Hosting</h1>
+        <div id="form-upwards"></div>
+
         <a href="https://www.swissmadesoftware.org/home.html">
             <img
                     class="swiss-logo"

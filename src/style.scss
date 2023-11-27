@@ -133,6 +133,13 @@ a {
   }
 }
 
+.section-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .section-contact {
   display: flex;
   flex-direction: column;

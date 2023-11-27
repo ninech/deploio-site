@@ -315,11 +315,18 @@ table.comparison {
   .btn-lg.btn {
     padding: 1rem 4rem; }
 
+.video {
+  aspect-ratio: 16 / 9;
+  width: 800px; }
+
 @media (max-width: 800px) {
   :root {
     --content-width: 100%;
     --column-gap: 1rem;
     --section-gap: 0rem; }
+
+  .video {
+    width: 100%; }
 
   h1 {
     text-align: center; }

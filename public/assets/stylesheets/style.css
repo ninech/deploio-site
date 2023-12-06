@@ -209,6 +209,9 @@ table.comparison {
   border-collapse: collapse; }
   table.comparison .table-logo {
     max-height: 5rem; }
+  table.comparison .table-logo.divio {
+    max-height: 3rem;
+  }
   table.comparison th {
     color: #fff; }
   table.comparison thead {

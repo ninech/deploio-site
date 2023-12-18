@@ -223,8 +223,8 @@ footer img.footer-certificate {
 .certificate img {
   max-height: 5rem;
 }
-.certificate .column {
-  max-width: 700px;
+.certificate > p.column {
+  max-width: 600px;
 }
 
 /* src: oliver */
@@ -321,6 +321,7 @@ table.comparison .check::after {
 .columns > .column {
   flex: 1;
   padding: 0 1rem;
+  max-width: 50%;
 }
 
 .text-center {

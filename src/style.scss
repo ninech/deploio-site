@@ -478,6 +478,26 @@ table.comparison {
   width: 800px;
 }
 
+.language-toggle {
+  border-radius: 10rem;
+  margin-top: 1rem;
+  width: max-content;
+  border: 0.3rem solid $bg-primary;
+  a {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+
+    &.active {
+      background-color: $bg-primary;
+      color: $text-light;
+    }
+  }
+}
+
 @media (max-width: 800px) {
   :root {
     --content-width: 100%;

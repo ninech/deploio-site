@@ -402,6 +402,25 @@ table.comparison .check::after {
   width: 800px;
 }
 
+.language-toggle {
+  border-radius: 10rem;
+  margin-top: 1rem;
+  width: max-content;
+  border: 0.3rem solid #1d1f4f;
+}
+.language-toggle a {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+}
+.language-toggle a.active {
+  background-color: #1d1f4f;
+  color: #fff;
+}
+
 @media (max-width: 800px) {
   :root {
     --content-width: 100%;

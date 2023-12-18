@@ -437,6 +437,9 @@ table.comparison .check::after {
     --column-gap: 1rem;
     --section-gap: 0rem;
   }
+  .column {
+    max-width: 100% !important;
+  }
   .video {
     width: 100%;
   }
@@ -454,14 +457,33 @@ table.comparison .check::after {
   .btn {
     font-size: 1rem;
   }
+  .hosted-on-deploio-logo {
+    margin-top: -26rem !important;
+    margin-left: 15rem;
+    height: 50rem;
+  }
+  .hosted-on-deploio-logo-wrapper {
+    height: 12rem;
+  }
+  .section-support .support-text {
+    background: white;
+    color: #1d1f4f;
+    border-radius: 0;
+  }
   .section-certificate .certificate {
-    border-radius: 2rem;
+    margin-left: -2rem;
+    border-radius: 0;
     padding: 1rem;
   }
   .section-certificate .hosted-on-deploio-logo {
     position: static;
     margin-bottom: 2rem;
     margin-top: -1rem;
+  }
+  .discover-more {
+    display: flex;
+    justify-content: center;
+    align-content: center;
   }
   section.section-support {
     padding: 0;

@@ -227,7 +227,7 @@ footer {
 }
 
 .line-height-1 {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 .footer {
@@ -494,6 +494,7 @@ table.comparison {
   margin-top: 1rem;
   width: max-content;
   border: 0.3rem solid $bg-primary;
+
   a {
     display: inline-block;
     padding: 0.5rem;
@@ -509,6 +510,7 @@ table.comparison {
   }
 }
 
+
 @media (max-width: 800px) {
   :root {
     --content-width: 100%;
@@ -516,6 +518,9 @@ table.comparison {
     --section-gap: 0rem;
   }
 
+  .column {
+    max-width: 100% !important;
+  }
   .video {
     width: 100%;
   }
@@ -540,10 +545,28 @@ table.comparison {
     font-size: 1rem;
   }
 
+  .hosted-on-deploio-logo {
+    margin-top: -26rem !important;
+    margin-left: 15rem;
+    height: 50rem;
+
+    &-wrapper {
+      height: 12rem;
+    }
+  }
+
+  .section-support {
+    .support-text {
+      background: white;
+      color: $bg-primary;
+      border-radius: 0;
+    }
+  }
 
   .section-certificate {
     .certificate {
-      border-radius: 2rem;
+      margin-left: -2rem;
+      border-radius: 0;
       padding: 1rem;
     }
 
@@ -554,6 +577,11 @@ table.comparison {
     }
   }
 
+  .discover-more {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
 
   section.section-support {
     padding: 0;

@@ -493,14 +493,14 @@ table.comparison {
   border-radius: 10rem;
   margin-top: 1rem;
   width: max-content;
-  border: 0.3rem solid $bg-primary;
+  border: 0.2rem solid $bg-primary;
+  display: inline-block;
 
   a {
     display: inline-block;
-    padding: 0.5rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 2rem;
     text-transform: uppercase;
-    font-weight: 700;
     text-decoration: none;
 
     &.active {

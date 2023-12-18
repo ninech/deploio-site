@@ -189,6 +189,9 @@ footer img.footer-certificate {
   max-width: 5rem;
   min-width: 5rem;
 }
+footer img.swiss-hosting {
+  height: 5rem;
+}
 
 .line-height-1 {
   line-height: 1.5;

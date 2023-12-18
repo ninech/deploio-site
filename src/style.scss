@@ -110,6 +110,13 @@ a {
     height: 100%;
     width: 100%;
   }
+
+
+  .support-text {
+    background-color: $bg-primary;
+    color: $text-light;
+    border-radius: 2rem;
+  }
 }
 
 .section-introduction {
@@ -317,7 +324,7 @@ table.comparison {
   }
 
   th {
-  color: $text-light;
+    color: $text-light;
   }
 
   thead {
@@ -520,10 +527,12 @@ table.comparison {
     }
   }
 
+
   section.section-support {
     padding: 0;
+
     .columns {
-      padding: 0      ;
+      padding: 0;
     }
 
     &::after {

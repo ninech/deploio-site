@@ -97,6 +97,11 @@ a {
   height: 100%;
   width: 100%;
 }
+.section-support .support-text {
+  background-color: #1d1f4f;
+  color: #fff;
+  border-radius: 2rem;
+}
 
 .section-introduction {
   display: flex;

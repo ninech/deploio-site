@@ -260,6 +260,7 @@ footer {
     &-wrapper {
       flex: 1;
     }
+
     width: 200%;
     height: 100%;
     background: url("../images/deploio2_wave_logo.svg") no-repeat;
@@ -341,6 +342,7 @@ table.comparison {
   &-mobile {
     display: none;
   }
+
   &-desktop {
     display: block;
   }
@@ -569,6 +571,7 @@ table.comparison {
     h3 {
       font-size: 1.7rem;
     }
+
     p {
       font-size: 1.3rem;
     }
@@ -598,6 +601,7 @@ table.comparison {
 
   .section-certificate {
     margin-bottom: -2rem;
+
     .certificate {
       margin-top: 2rem;
       margin-left: -2rem;
@@ -647,6 +651,7 @@ table.comparison {
 
   form {
     width: 100%;
+
     .column {
       width: 100%;
     }

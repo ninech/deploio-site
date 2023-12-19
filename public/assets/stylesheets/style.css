@@ -41,7 +41,6 @@ div.article-wrapper {
   align-items: stretch;
   justify-content: stretch;
   gap: var(--section-gap);
-  overflow-x: hidden;
   max-width: 190rem;
   margin: auto auto;
 }
@@ -141,6 +140,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: var(--column-gap) !important;
 }
 
 section.section-support {
@@ -424,6 +424,7 @@ table.comparison .check::after {
   margin-top: 1rem;
   width: max-content;
   border: 0.2rem solid #1d1f4f;
+  background: white;
   display: inline-block;
 }
 .language-toggle a {

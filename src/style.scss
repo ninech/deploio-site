@@ -533,6 +533,10 @@ table.comparison {
     --section-gap: 0rem;
   }
 
+  .section-heading {
+    text-align: center;
+  }
+
   .column {
     max-width: 100% !important;
   }
@@ -619,6 +623,13 @@ table.comparison {
       background-size: 250%;
       opacity: 0.5;
       background-position: -1rem 0;
+    }
+  }
+
+  form {
+    width: 100%;
+    .column {
+      width: 100%;
     }
   }
 

@@ -451,6 +451,9 @@ table.comparison .check::after {
     --column-gap: 1rem;
     --section-gap: 0rem;
   }
+  .section-heading {
+    text-align: center;
+  }
   .column {
     max-width: 100% !important;
   }
@@ -515,6 +518,12 @@ table.comparison .check::after {
     background-size: 250%;
     opacity: 0.5;
     background-position: -1rem 0;
+  }
+  form {
+    width: 100%;
+  }
+  form .column {
+    width: 100%;
   }
   footer {
     line-height: 1;

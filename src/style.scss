@@ -332,6 +332,13 @@ table.comparison {
   flex-grow: 1;
   border-collapse: collapse;
 
+  &-mobile {
+    display: none;
+  }
+  &-desktop {
+    display: block;
+  }
+
   .table-logo {
     max-height: 5rem;
   }
@@ -582,6 +589,16 @@ table.comparison {
       position: static;
       margin-bottom: 2rem;
       margin-top: -1rem;
+    }
+  }
+
+  table.comparison {
+    &-mobile {
+      display: block;
+    }
+
+    &-desktop {
+      display: none;
     }
   }
 

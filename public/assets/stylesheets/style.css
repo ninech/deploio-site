@@ -214,13 +214,18 @@ footer img.swiss-hosting {
 .section-certificate {
   position: relative;
   overflow-x: visible;
+  display: flex;
 }
 .section-certificate .hosted-on-deploio-logo {
-  position: absolute;
-  top: -29rem;
-  left: 10rem;
-  width: 1378px;
-  max-width: 100vw !important;
+  width: 200%;
+  height: 100%;
+  background: url("../images/deploio2_wave_logo.svg") no-repeat;
+  background-position-y: -14rem;
+  margin-top: -3rem;
+  background-size: 100%;
+}
+.section-certificate .hosted-on-deploio-logo-wrapper {
+  flex: 1;
 }
 
 .certificate {
@@ -503,9 +508,12 @@ table.comparison .check::after {
     padding: 1rem;
   }
   .section-certificate .hosted-on-deploio-logo {
-    position: static;
-    margin-bottom: 2rem;
-    margin-top: -1rem;
+    width: 200%;
+    height: 20rem;
+    margin: 0 !important;
+    margin-top: -7rem !important;
+    background-size: 80%;
+    background-position-x: 20rem;
   }
   table.comparison-mobile {
     display: block;

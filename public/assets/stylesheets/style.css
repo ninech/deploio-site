@@ -493,7 +493,11 @@ table.comparison .check::after {
     color: #1d1f4f;
     border-radius: 0;
   }
+  .section-certificate {
+    margin-bottom: -2rem;
+  }
   .section-certificate .certificate {
+    margin-top: 2rem;
     margin-left: -2rem;
     border-radius: 0;
     padding: 1rem;

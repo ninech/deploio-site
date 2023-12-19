@@ -223,6 +223,7 @@ footer img.swiss-hosting {
   background-position-y: -14rem;
   margin-top: -3rem;
   background-size: 100%;
+  pointer-events: none;
 }
 .section-certificate .hosted-on-deploio-logo-wrapper {
   flex: 1;

@@ -525,7 +525,6 @@ table.comparison {
   }
 }
 
-
 @media (max-width: 800px) {
   :root {
     --content-width: 100%;
@@ -557,6 +556,15 @@ table.comparison {
       margin: -11rem 0 0;
       min-height: 20rem;
       object-fit: cover;
+    }
+  }
+
+  .section-recommendations {
+    h3 {
+      font-size: 1.7rem;
+    }
+    p {
+      font-size: 1.3rem;
     }
   }
 

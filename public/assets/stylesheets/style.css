@@ -471,6 +471,12 @@ table.comparison .check::after {
     min-height: 20rem;
     object-fit: cover;
   }
+  .section-recommendations h3 {
+    font-size: 1.7rem;
+  }
+  .section-recommendations p {
+    font-size: 1.3rem;
+  }
   .btn {
     font-size: 1rem;
   }

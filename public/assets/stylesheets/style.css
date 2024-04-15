@@ -122,7 +122,7 @@ a {
   max-height: 100vh;
 }
 .section-introduction .swiss-logo {
-  max-height: 10rem;
+  max-height: 8rem;
 }
 .section-introduction h1 {
   margin-bottom: 1rem;
@@ -572,3 +572,5 @@ table.comparison .check::after {
     margin-bottom: 1rem;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

@@ -123,10 +123,17 @@
                 formUpwards.appendChild(contactWrapper);
             }
 
-            form.addEventListener("submit", function (e) {
+            form.addEventListener("submit", async function (e) {
                 e.preventDefault();
                 const data = new FormData(form);
                 const action = e.target.action;
+                await new Promise((res, rej) => {
+                  grecaptcha.ready(function() {
+                  grecaptcha.execute("6LeflMYpAAAAANQb_AFEGGWCNCfcvt1WW3MtRFVx", {action: 'submit'}).then(function(token) {
+                      data.append('g-recaptcha-response', token);
+                      res(data)
+                  }).catch(rej)
+                })})
                 fetch(action, {
                     method: "POST",
                     body: data,
@@ -153,6 +160,14 @@
     ></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
+<script src="https://www.google.com/recaptcha/api.js?onload=ReCaptchaCallbackV3&render=6LeflMYpAAAAANQb_AFEGGWCNCfcvt1WW3MtRFVx"></script>
+<script type="text/javascript">
+  var ReCaptchaCallbackV3 = function() {
+    grecaptcha.ready(function() {
+      grecaptcha.execute("6LeflMYpAAAAANQb_AFEGGWCNCfcvt1WW3MtRFVx")
+    });
+  };
+</script>
 <header>
     <nav class="reduced-width columns align-center">
         <a

@@ -58,7 +58,7 @@ export const QuantInput = ({
   }, [quantity]);
 
   return (
-    <div className="flex h-[48px] w-[118px] items-center justify-between gap-1 rounded-xl border border-nine-gray-200 p-1">
+    <div className="bg-primary flex h-[48px] w-[118px] items-center justify-between gap-1 rounded-xl border border-nine-gray-200 p-1">
       <ButtonIcon
         type="button"
         className="bg-nine-primary-100 h-6 w-6 rounded-md border border-nine-gray-200 text-nine-primary-900"
@@ -71,7 +71,7 @@ export const QuantInput = ({
       <input
         type="text"
         value={value}
-        className="h-[31px] w-[36px] rounded-md border border-transparent py-1 text-center font-medium text-nine-primary-900 outline-none hover:border-nine-gray-200 focus:border-nine-gray-700 "
+        className="h-[31px] w-[36px] bg-primary text-white rounded-md border border-transparent py-1 text-center font-medium text-nine-primary-900 outline-none hover:border-nine-gray-200 focus:border-nine-gray-700 "
         min={0}
         onChange={handleChange}
         onBlur={handleOnBlur}

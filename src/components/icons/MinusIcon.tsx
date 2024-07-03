@@ -9,7 +9,7 @@ export const MinusIcon = () => {
     >
       <path
         d="M3.32715 7.56152H12.0771"
-        stroke="#344054"
+        stroke="#FFFFFF"
         strokeWidth="1.25"
         strokeLinecap="round"
         strokeLinejoin="round"

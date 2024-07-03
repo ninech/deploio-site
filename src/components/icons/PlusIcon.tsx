@@ -9,7 +9,7 @@ export const PlusIcon = () => {
     >
       <path
         d="M7.70215 3.18652V11.9365M3.32715 7.56152H12.0771"
-        stroke="#344054"
+        stroke="#FFFFFF"
         strokeWidth="1.25"
         strokeLinecap="round"
         strokeLinejoin="round"

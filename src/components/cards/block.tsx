@@ -50,7 +50,7 @@ export const Block = ({ title, segments, products }: BlockProps) => {
           onClick={onToggleCollapseBlock}
         >
           {isOpenBlock ? (
-            <ChevronTopIcon className="text-white" />
+            <ChevronTopIcon />
           ) : (
             <ChevronBottomIcon className="text-white" />
           )}

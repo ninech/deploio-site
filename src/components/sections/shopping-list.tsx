@@ -58,9 +58,9 @@ export const ShoppingList = () => {
   };
 
   return (
-    <section className="border-nine-gray-200 sm:rounded-3xl md:border relative">
-      <img src="/images/wave.svg" alt="wave" className="absolute w-[300%] z-[0]" />
-      <div className="flex flex-col gap-4 border-b border-nine-gray-200 p-4 last:border-b-0 sm:gap-5 sm:rounded-t-3xl sm:p-5 md:gap-10 md:bg-nine-tertiary md:p-10">
+    <section className="border-nine-gray-200 sm:rounded-3xl md:border relative overflow-hidden">
+      <img src="/images/wave.svg" alt="wave" className="absolute w-[251%] z-[0] max-w-[9999%] top-[-8rem] left-[-140%]" />
+      <div className="flex flex-col gap-4 border-b border-nine-gray-200 p-4 last:border-b-0 sm:gap-5 sm:rounded-t-3xl sm:p-5 md:gap-10 md:bg-nine-tertiary md:p-10 z-5">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <h1
             className="text-lg font-semibold leading-8 text-nine-primary-900"
@@ -76,7 +76,7 @@ export const ShoppingList = () => {
         </div>
 
         {cartItems.length === 0 ? (
-          <div className="flex flex-col items-center gap-5">
+          <div className="flex flex-col items-center gap-5 relative">
             <img
               src="/empty-cart.png"
               alt="empty shopping list"
@@ -87,7 +87,7 @@ export const ShoppingList = () => {
             </div>
           </div>
         ) : (
-          <div className="rounded-xl border border-nine-gray-200 bg-white shadow-nine-card">
+          <div className="rounded-xl border border-nine-gray-200 bg-white shadow-nine-card relative">
             <ul>
               {cartItems.map((cartItem) => (
                 <ProductShopping
@@ -99,7 +99,7 @@ export const ShoppingList = () => {
           </div>
         )}
       </div>
-      <div className="flex items-center justify-between border-b border-nine-gray-200 bg-nine-tertiary px-5 py-5 last:rounded-b-3xl last:border-b-0 md:bg-white md:px-14">
+      <div className="flex items-center justify-between border-b border-nine-gray-200 bg-nine-tertiary px-5 py-5 last:rounded-b-3xl last:border-b-0 md:bg-white md:px-14 z-5 relative">
         <div className="text-lg font-semibold text-nine-primary-600">
           Total
         </div>
@@ -165,7 +165,7 @@ const InfoShoppingCard = ({
   onClick,
 }: InfoShoppingCardProps) => {
   return (
-    <div className="flex flex-col items-start gap-3 rounded-xl border border-nine-gray-200 bg-white p-5 shadow-nine-card md:flex-row md:items-center md:justify-between md:gap-0">
+    <div className="flex flex-col items-start gap-3 rounded-xl border border-nine-gray-200 bg-white p-5 shadow-nine-card md:flex-row md:items-center md:justify-between md:gap-0 relative">
       <div className="flex flex-col gap-2">
         <h5 className="text-lg font-semibold text-nine-primary-900">
           {title}

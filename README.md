@@ -1,6 +1,5 @@
 # deploio-landing-page
 This is the landing page for deplo.io.
-# pricing-calculator
 
 ## Table of Contents
 

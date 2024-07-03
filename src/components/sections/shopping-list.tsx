@@ -68,11 +68,6 @@ export const ShoppingList = () => {
           >
             Selected Products
           </h1>
-          {cartItems.length > 0 && (
-            <div className="text-right text-base font-normal text-nine-tertiary-600 md:text-left">
-              {cartItems.length} Item{cartItems.length > 1 ? "s" : ""}
-            </div>
-          )}
         </div>
 
         {cartItems.length === 0 ? (

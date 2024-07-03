@@ -73,7 +73,7 @@ export const ShoppingList = () => {
         {cartItems.length === 0 ? (
           <div className="flex flex-col items-center gap-5 relative">
             <img
-              src="/empty-cart.png"
+              src="/empty-cart.svg"
               alt="empty shopping list"
               className="h-[74px] w-[73px]"
             />

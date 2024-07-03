@@ -18,9 +18,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sora: ["Sora Variable", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
-        "inter-tight": ["Inter Tight", "sans-serif"],
       },
       colors: {
         nine: {

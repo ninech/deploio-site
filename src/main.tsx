@@ -1,5 +1,3 @@
-import "@fontsource-variable/inter-tight";
-import "@fontsource-variable/sora";
 import "@fontsource-variable/montserrat";
 import React from "react";
 import ReactDOM from "react-dom/client";

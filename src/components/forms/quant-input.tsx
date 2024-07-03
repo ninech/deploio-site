@@ -71,7 +71,7 @@ export const QuantInput = ({
       <input
         type="text"
         value={value}
-        className="h-[31px] w-[36px] rounded-md border border-transparent py-1 text-center font-montserrat font-medium text-nine-primary-900 outline-none hover:border-nine-gray-200 focus:border-nine-gray-700 "
+        className="h-[31px] w-[36px] rounded-md border border-transparent py-1 text-center font-medium text-nine-primary-900 outline-none hover:border-nine-gray-200 focus:border-nine-gray-700 "
         min={0}
         onChange={handleChange}
         onBlur={handleOnBlur}

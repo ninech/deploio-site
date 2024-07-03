@@ -36,7 +36,7 @@ export const Block = ({ title, segments, products }: BlockProps) => {
       <ProductCount amount={productSelected.length} />
       <div
         className={clsx(
-          "inline-flex w-full  items-center justify-between rounded-xl border-t border-nine-gray-200 bg-white px-3 py-2 font-montserrat text-lg font-semibold text-nine-primary-900",
+          "inline-flex w-full  items-center justify-between rounded-xl border-t border-nine-gray-200 bg-white px-3 py-2 text-lg font-semibold text-nine-primary-900",
           {
             "rounded-b-none": isOpenBlock,
           }

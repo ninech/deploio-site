@@ -59,7 +59,7 @@ export const ProductShopping = ({ cartItem }: ProductShoppingProps) => {
             <span>{product.displayName}</span>
             <HelpTextProduct helpText={product.helpText} />
           </h3>
-          <p className="font-montserrat text-sm font-normal text-nine-primary-600">
+          <p className="text-sm font-normal text-nine-primary-600">
             {product.descriptionSale}
           </p>
           <BundleProducts bundleProducts={product.bundleProducts} />

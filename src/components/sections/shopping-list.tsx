@@ -62,13 +62,13 @@ export const ShoppingList = () => {
       <div className="flex flex-col gap-4 border-b border-nine-gray-200 p-4 last:border-b-0 sm:gap-5 sm:rounded-t-3xl sm:p-5 md:gap-10 md:bg-nine-tertiary md:p-10">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <h1
-            className="font-montserrat text-lg font-semibold leading-8 text-nine-primary-900"
+            className="text-lg font-semibold leading-8 text-nine-primary-900"
             ref={productListRef}
           >
             Selected Products
           </h1>
           {cartItems.length > 0 && (
-            <div className="text-right font-montserrat text-base font-normal text-nine-tertiary-600 md:text-left">
+            <div className="text-right text-base font-normal text-nine-tertiary-600 md:text-left">
               {cartItems.length} Item{cartItems.length > 1 ? "s" : ""}
             </div>
           )}
@@ -99,14 +99,14 @@ export const ShoppingList = () => {
         )}
       </div>
       <div className="flex items-center justify-between border-b border-nine-gray-200 bg-nine-tertiary px-5 py-5 last:rounded-b-3xl last:border-b-0 md:bg-white md:px-14">
-        <div className="font-montserrat text-lg font-semibold text-nine-primary-600">
+        <div className="text-lg font-semibold text-nine-primary-600">
           Total
         </div>
         <div className="inline-flex items-baseline gap-2">
-          <span className="font-montserrat text-3xl font-semibold text-nine-primary-900">
+          <span className="text-3xl font-semibold text-nine-primary-900">
             {totalFormatted}
           </span>
-          <span className="font-montserrat text-lg font-normal text-nine-primary-600">
+          <span className="text-lg font-normal text-nine-primary-600">
             /mo
           </span>
         </div>
@@ -166,10 +166,10 @@ const InfoShoppingCard = ({
   return (
     <div className="flex flex-col items-start gap-3 rounded-xl border border-nine-gray-200 bg-white p-5 shadow-nine-card md:flex-row md:items-center md:justify-between md:gap-0">
       <div className="flex flex-col gap-2">
-        <h5 className="font-montserrat text-lg font-semibold text-nine-primary-900">
+        <h5 className="text-lg font-semibold text-nine-primary-900">
           {title}
         </h5>
-        <p className="font-montserrat text-sm font-normal text-nine-primary-600">
+        <p className="text-sm font-normal text-nine-primary-600">
           {description}
         </p>
       </div>

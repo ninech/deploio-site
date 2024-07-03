@@ -8,10 +8,10 @@ type Props = {
 export const PriceAmount = ({ product }: Props) => {
   return (
     <div className="flex items-center gap-1 whitespace-nowrap">
-      <span className="font-montserrat text-sm font-medium text-nine-primary-900">
+      <span className="text-sm font-medium text-nine-primary-900">
         {formatProductCurrency(product)}
       </span>
-      <span className="font-montserrat text-xs text-nine-primary-600">
+      <span className="text-xs text-nine-primary-600">
         /mo
       </span>
     </div>

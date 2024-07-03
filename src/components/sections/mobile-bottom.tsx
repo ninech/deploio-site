@@ -45,17 +45,17 @@ export const MobileBottom = ({
 
           <button
             type="button"
-            className="font-montserrat text-xs font-medium text-nine-primary"
+            className="text-xs font-medium text-nine-primary"
             onClick={onProductSelectClick}
           >
             {productsAmount} product{productsAmount === 1 ? "" : "s"} selected
           </button>
         </div>
         <div className="flex items-center gap-1 whitespace-nowrap">
-          <span className="font-montserrat text-lg font-medium text-nine-primary-900">
+          <span className="text-lg font-medium text-nine-primary-900">
             {totalFormatted}
           </span>
-          <span className="font-montserrat text-sm text-nine-primary-600">
+          <span className="text-sm text-nine-primary-600">
             /mo
           </span>
         </div>

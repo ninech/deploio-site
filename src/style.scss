@@ -697,3 +697,13 @@ table.comparison {
     }
   }
 }
+
+hr.pretty-hr {
+  background: $bg-primary;
+  border-radius: 1rem;
+  height: 0.7rem !important;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, 0);
+  width: 90%;
+}

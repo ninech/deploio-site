@@ -11,7 +11,8 @@ export const serializeProductsByCategories = (
   segments: ProductSegment[];
 }[] => {
   const categorizedProducts = categorizeProducts(data);
-  return sortCategoriesAndSegments(categorizedProducts);
+  const filteredCategories = filterCategories(categorizedProducts);
+  return sortCategoriesAndSegments(filteredCategories);
 };
 
 interface BlockDict {
@@ -82,6 +83,19 @@ const addProductToSegment = (
     };
   }
 };
+
+const filterCategories = (blocksDict: BlockDict) => {
+  const whiteList = ["Deploio", "Object Storage", "On-Demand Services"];
+  const newDict: BlockDict = {};
+
+  Object.keys(blocksDict).forEach((blockName) => {
+    if (whiteList.includes(blockName)) {
+      newDict[blockName] = blocksDict[blockName];
+    }
+  });
+
+  return newDict;
+}
 
 const sortCategoriesAndSegments = (blocksDict: BlockDict) => {
   return sortObjectBy(

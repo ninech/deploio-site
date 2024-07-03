@@ -36,7 +36,7 @@ export const Block = ({ title, segments, products }: BlockProps) => {
       <ProductCount amount={productSelected.length} />
       <div
         className={clsx(
-          "inline-flex w-full  items-center justify-between rounded-xl border-t border-nine-gray-200 bg-white px-3 py-2 text-lg font-semibold text-nine-primary-900",
+          "inline-flex w-full  items-center justify-between rounded-xl border-t border-nine-gray-200 bg-nine-primary px-3 py-2 text-lg font-semibold text-white",
           {
             "rounded-b-none": isOpenBlock,
           }
@@ -50,9 +50,9 @@ export const Block = ({ title, segments, products }: BlockProps) => {
           onClick={onToggleCollapseBlock}
         >
           {isOpenBlock ? (
-            <ChevronTopIcon />
+            <ChevronTopIcon className="text-white" />
           ) : (
-            <ChevronBottomIcon className="text-nine-gray-700" />
+            <ChevronBottomIcon className="text-white" />
           )}
         </Button>
       </div>

@@ -23,7 +23,7 @@ module.exports = {
       },
       colors: {
         nine: {
-          primary: "#4A3CE5",
+          primary: "#1F1F4F",
           "primary-600": "#475467",
           "primary-900": "#101828",
           "deep-navy": "#1F1D2B",

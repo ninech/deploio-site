@@ -464,7 +464,7 @@ table.comparison {
 }
 
 .bg-secondary {
-  background-color: $bg-secondary;
+  background-color: $bg-secondary !important;
   color: $text-light;
 
   a {

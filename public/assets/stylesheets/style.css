@@ -314,7 +314,7 @@ table.comparison {
     color: #fff; }
 
 .bg-secondary {
-  background-color: #0f1326;
+  background-color: #0f1326 !important;
   color: #fff; }
   .bg-secondary a {
     color: #fff; }

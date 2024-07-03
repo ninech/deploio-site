@@ -1,13 +1,1078 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <title>nine</title>
-  </head>
-  <body className="light">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <title>Deploio – Schweizer PaaS</title>
+    <link rel="stylesheet" href="assets/stylesheets/style.css"/>
+    <meta charset="UTF-8"/>
+    <!-- Opengraph meta -->
+    <meta
+            property="og:title"
+            content="Der Turbo für dein App Hosting"
+    />
+    <meta
+            property="og:image"
+            content="https://deplo.io/meta/deploio-preview.png"
+            name="image"
+    />
+    <meta
+            property="og:description"
+            name="description"
+            content="Deploio vereinfacht die App-Bereitstellung und -Verwaltung und bietet eine flexible und benutzerfreundliche Plattform, um das volle Potenzial fortschrittlicher Technologie zu nutzen. Deploye Deine Apps mit Leichtigkeit wie ein Tipi - leichtgewichtig und skalierbar - und sorge für ein perfektes Zuhause für Deine App."
+    />
+
+    <!-- Twitter meta -->
+    <meta name="twitter:site" content="@nine_ch"/>
+    <meta name="twitter:creator" content="@nine_ch"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta
+            name="twitter:title"
+            content="Der Turbo für dein App Hosting"
+    />
+    <meta
+            name="twitter:image"
+            content="https://deplo.io/meta/deploio-preview.png"
+    />
+    <meta name="twitter:url" content="https://deplo.io/"/>
+    <meta
+            name="twitter:description"
+            content="Simples und skalierbares App Deployment &amp; Management"
+    />
+
+    <!-- Mobile Specific Metas -->
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Nine Internet Solutions AG" name="author"/>
+
+    <!-- Favicons -->
+    <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/meta/apple-touch-icon.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/meta/favicon-32x32.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/meta/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest"/>
+
+    <!-- css, fonts & js-->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+            crossorigin="anonymous"
+    />
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                "gtm.start": new Date().getTime(),
+                event: "gtm.js",
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-MHQPVQD4");
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11323234654"></script>
+    <script> window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'AW-11323234654'); </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BHVTFSL0V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-0BHVTFSL0V');
+    </script>
+
+    <script>
+        window.addEventListener("load", function () {
+            const form = document.getElementById("form-container");
+            const contactWrapper = document.getElementById("contact-wrapper");
+            const formUpwards = document.getElementById("form-upwards");
+            const thankYouMessageTemplate = document.getElementById("thank-you-message-template");
+
+            // if parameter subscribe is set, move the contactWrapper within the formUpwards
+            if (window.location.search.includes("subscribe")) {
+                document.querySelector('header').style.display = 'none';
+                formUpwards.appendChild(contactWrapper);
+            }
+
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const action = e.target.action;
+                await new Promise((res, rej) => {
+                  grecaptcha.ready(function() {
+                  grecaptcha.execute("6LeflMYpAAAAANQb_AFEGGWCNCfcvt1WW3MtRFVx", {action: 'submit'}).then(function(token) {
+                      data.append('g-recaptcha-response', token);
+                      res(data)
+                  }).catch(rej)
+                })})
+                fetch(action, {
+                    method: "POST",
+                    body: data,
+                }).then(() => {
+                    form.remove();
+                    contactWrapper.appendChild(
+                        thankYouMessageTemplate.content.cloneNode(true)
+                    );
+                    gtag('event', 'conversion', {'send_to': 'AW-11323234654/N7bxCIDA2u8YEN6yq5cq'})
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MHQPVQD4"
+            height="0"
+            width="0"
+            style="display: none; visibility: hidden"
+    ></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script src="https://www.google.com/recaptcha/api.js?onload=ReCaptchaCallbackV3&render=6LeflMYpAAAAANQb_AFEGGWCNCfcvt1WW3MtRFVx"></script>
+<script type="text/javascript">
+  var ReCaptchaCallbackV3 = function() {
+    grecaptcha.ready(function() {
+      grecaptcha.execute("6LeflMYpAAAAANQb_AFEGGWCNCfcvt1WW3MtRFVx")
+    });
+  };
+</script>
+<header>
+    <nav class="reduced-width columns align-center">
+        <a
+                href="#contact-wrapper"
+                class="btn btn-lg bg-primary"
+        >Jetzt Starten</a
+        >
+        <div>
+            <a
+                    href="https://cockpit.nine.ch/de/session/new?origin=%2F"
+                    target="_blank"
+                    class="btn btn-sm bg-gradient"
+            >Login</a
+            >
+            <a href="#contact-wrapper" class="btn btn-sm bg-gradient"
+            >Registrieren</a
+            >
+            <div class="language-toggle">
+                <a class="active" href="#">de</a>
+                <a href="en.html">en</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<article>
+    <div class="article-wrapper">
+        <div class="section-introduction reduced-width">
+            <img
+                    class="deploio-logo"
+                    src="./assets/images/deploio_wave_logo.png"
+                    alt="deploio logo"
+            />
+            <h1>Der Turbo für dein App Hosting</h1>
+            <div id="form-upwards"></div>
+
+            <a href="https://www.swissmadesoftware.org/home.html">
+                <img
+                        class="swiss-logo"
+                        src="assets/images/swissmadesoftware_hosting.png"
+                        alt="swiss made software, swiss hosting"
+                />
+            </a>
+            <div></div>
+        </div>
+        <div class="section-video reduced-width">
+            <iframe class="video"
+                    src="https://www.youtube-nocookie.com/embed/3iOWZ4ou49Y?si=vvY4varRRF7kLHTD&amp;controls=0"
+                    title="Das best behütete App-Geheimnis der Schweiz" frameborder="0" controls="0" rel="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+        </div>
+        <div class="section-tech columns reduced-width">
+            <section class="column">
+                <h2>Unterstützte Technologien</h2>
+                <ul class="tech-grid">
+                    <li class="card">
+                        <img
+                                src="./assets/images/language_ruby.png"
+                                alt="Ruby"
+                        />
+                    </li>
+                    <li class="card">
+                        <img
+                                src="./assets/images/language_django.png"
+                                alt="Django"
+                        />
+                    </li>
+                    <li class="card">
+                        <img
+                                src="./assets/images/language_python.png"
+                                alt="Python"
+                        />
+                    </li>
+                    <li class="card">
+                        <img
+                                src="./assets/images/language_go.png"
+                                alt="Go"
+                        />
+                    </li>
+                    <li class="card">
+                        <img
+                                src="./assets/images/language_php.png"
+                                alt="PHP"
+                        />
+                    </li>
+                    <li class="card">
+                        <img
+                                src="./assets/images/language_node.png"
+                                alt="NodeJS"
+                        />
+                    </li>
+                </ul>
+            </section>
+            <section class="section-convenience column">
+                <h2>Deploio macht dein Leben einfacher!</h2>
+                <p>
+                    Als zukunftsweisende
+                    <strong>App-Engine</strong> vereinfachen wir den Einsatz
+                    und die Verwaltung deiner Webanwendungen. Verabschiede
+                    dich von technischen Komplikationen und fokussiere dich
+                    auf das, was du am besten kannst:
+                </p>
+                <p>Atemberaubende Anwendungen erstellen.</p>
+                <h2>Platform-as-a-Service (PaaS)</h2>
+                <p>
+                    Unsere Plattform integriert sich nahtlos in deine
+                    bestehenden Workflows und bietet dir eine einfache
+                    Bereitstellung, Skalierbarkeit, vielseitiges Management
+                    und vieles mehr. Alles auf einer sicher gehosteten
+                    Schweizer Plattform.
+                </p>
+            </section>
+        </div>
+        <div class="section-recommendations columns reduced-width">
+            <section class="column">
+                <h2 class="seo">Empfehlungen</h2>
+                <ul class="col list">
+                    <li>
+                        <h3>Einfache Bereitstellung</h3>
+                        <p>
+                            Mit einigen Klicks ist deine Anwendung bereit.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>Swiss Data Center Hosting</h3>
+                        <p>
+                            Deploio wird von einer Schweizer Firma in 
+                            einem Schweizer Datencenter gehosted.
+                        </p>
+                    </li>
+
+                    <li>
+                        <h3>Zusatzdienste</h3>
+                        <p>Wie Managed Database und KeyDB für deine App.</p>
+                    </li>
+
+                    <li>
+                        <h3>Developer-Friendly</h3>
+                        <p>Mehr Code, weniger Infrastruktur-Sorgen.</p>
+                    </li>
+                </ul>
+                <div class="discover-more">
+                    <a
+                            href="https://docs.nine.ch/de/docs/category/deploio"
+                            class="btn btn-secondary btn-lg discover-more-btn"
+                    >Mehr Erfahren</a>
+                </div>
+            </section>
+            <section
+                    class="section-certificate column certificate-container"
+            >
+                <h2 class="seo">Zertifizierung</h2>
+                <div class="hosted-on-deploio-logo-wrapper">
+                    <div class="hosted-on-deploio-logo"></div>
+                </div>
+                <div class="certificate bg-primary columns keep-columns">
+                    <div class="center">
+                        <img
+                                src="assets/images/Iso_certificate.png"
+                                alt=""
+                        />
+                    </div>
+                    <p class="column">
+                        Auf unseren Umgang mit euren Daten ist Verlass, 
+                        sogar mit Zertifikat: <strong>Deploio
+                        ist ISO 27001 zertifiziert.</strong>
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <section>
+          <div id="root"></div>
+          <script type="module" src="/src/main.tsx"></script>
+        </section>
+
+        <section class="section-comparison reduced-width">
+            <h2 class="seo">Comparison table</h2>
+            <div>
+                <table class="comparison comparison-desktop">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>
+                            <img
+                                    class="table-logo"
+                                    alt="deplo.io"
+                                    src="assets/images/deploio_logo.svg"
+                            />
+                        </th>
+                        <th>
+                            <img
+                                    class="table-logo"
+                                    alt="heroku"
+                                    src="assets/images/heroku_logo.png"
+                            />
+                        </th>
+                        <th>
+                            <img
+                                    class="table-logo divio"
+                                    alt="divio"
+                                    src="assets/images/divio_logo.png"
+                            />
+                        </th>
+                        <th>
+                            <img
+                                    class="table-logo"
+                                    alt="render"
+                                    src="assets/images/render_logo.svg"
+                            />
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>Swiss Location</th>
+                        <td class="check"></td>
+                        <td></td>
+                        <td class="check"></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th>Swiss Owned</th>
+                        <td class="check"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th>Own Infrastructure</th>
+                        <td class="check"></td>
+                        <td></td>
+                        <td></td>
+                        <td class="check"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Fully Automated</th>
+                        <td class="check"></td>
+                        <td class="check"></td>
+                        <td class="check"></td>
+                        <td class="check"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Swiss Object Storage</th>
+                        <td class="check"></td>
+                        <td></td>
+                        <td class="check"></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th>Simple Deployment</th>
+                        <td class="check"></td>
+                        <td class="check"></td>
+                        <td class="check"></td>
+                        <td class="check"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Buildpacks</th>
+                        <td class="check"></td>
+                        <td class="check"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th>Dockerfile Support</th>
+                        <td>2024</td>
+                        <td class="check"></td>
+                        <td class="check"></td>
+                        <td class="check"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Multicloud Enterprise Solution</th>
+                        <td></td>
+                        <td></td>
+                        <td class="check"></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table class="comparison comparison-mobile">
+                    <tbody>
+                    <tr class="bg-primary">
+                        <th></th>
+                        <th>Swiss Location</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="deplo.io"
+                                    src="assets/images/deploio_logo.svg"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="heroku"
+                                    src="assets/images/heroku_logo.png"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="divio"
+                                    src="assets/images/divio_logo.png"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="render"
+                                    src="assets/images/render_logo.svg"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bg-primary">
+                        <th></th>
+                        <th>Swiss Owned</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="deplo.io"
+                                    src="assets/images/deploio_logo.svg"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="heroku"
+                                    src="assets/images/heroku_logo.png"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="divio"
+                                    src="assets/images/divio_logo.png"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="render"
+                                    src="assets/images/render_logo.svg"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bg-primary">
+                        <th></th>
+                        <th>Own Infrastructure</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="deplo.io"
+                                    src="assets/images/deploio_logo.svg"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="heroku"
+                                    src="assets/images/heroku_logo.png"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="divio"
+                                    src="assets/images/divio_logo.png"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="render"
+                                    src="assets/images/render_logo.svg"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr class="bg-primary">
+                        <th></th>
+                        <th>Fully Automated</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="deplo.io"
+                                    src="assets/images/deploio_logo.svg"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="heroku"
+                                    src="assets/images/heroku_logo.png"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="divio"
+                                    src="assets/images/divio_logo.png"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="render"
+                                    src="assets/images/render_logo.svg"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr class="bg-primary">
+                        <th></th>
+                        <th>Swiss Object Storage</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="deplo.io"
+                                    src="assets/images/deploio_logo.svg"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="heroku"
+                                    src="assets/images/heroku_logo.png"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="divio"
+                                    src="assets/images/divio_logo.png"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="render"
+                                    src="assets/images/render_logo.svg"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bg-primary">
+                        <th></th>
+                        <th>Simple Deployment</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="deplo.io"
+                                    src="assets/images/deploio_logo.svg"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="heroku"
+                                    src="assets/images/heroku_logo.png"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="divio"
+                                    src="assets/images/divio_logo.png"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="render"
+                                    src="assets/images/render_logo.svg"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr class="bg-primary">
+                        <th></th>
+                        <th>Buildpacks</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="deplo.io"
+                                    src="assets/images/deploio_logo.svg"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="heroku"
+                                    src="assets/images/heroku_logo.png"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="divio"
+                                    src="assets/images/divio_logo.png"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="render"
+                                    src="assets/images/render_logo.svg"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bg-primary">
+                        <th></th>
+                        <th>Dockerfile Support</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="deplo.io"
+                                    src="assets/images/deploio_logo.svg"
+                            />
+                        </td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="heroku"
+                                    src="assets/images/heroku_logo.png"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="divio"
+                                    src="assets/images/divio_logo.png"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="render"
+                                    src="assets/images/render_logo.svg"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr class="bg-primary">
+                        <th></th>
+                        <th>Multicloud Enterprise Solution</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="deplo.io"
+                                    src="assets/images/deploio_logo.svg"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="heroku"
+                                    src="assets/images/heroku_logo.png"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="divio"
+                                    src="assets/images/divio_logo.png"
+                            />
+                        </td>
+                        <td class="check"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                    class="table-logo"
+                                    alt="render"
+                                    src="assets/images/render_logo.svg"
+                            />
+                        </td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="contact-wrapper" class="section-contact reduced-width">
+            <h2 class="section-heading">
+                Jetzt loslegen
+            </h2>
+            <form
+                    method="POST"
+                    action="https://script.google.com/macros/s/AKfycbwT1lwiqSW1clYKkuHFrjcXYyjpZD-mreglv8ZvKqP7e-HrTPE3YPPno6zEOtuKAysKbw/exec"
+                    id="form-container"
+                    class="center columns"
+            >
+                <input
+                        class="column"
+                        name="Email"
+                        type="email"
+                        placeholder="E-Mail"
+                        required
+                />
+
+                <button
+                        type="submit"
+                        class="button-2 btn btn-lg bg-primary column"
+                >
+                    Registrieren
+                </button>
+
+            </form>
+            <br />
+            <p>Deploio ausprobieren und von zwei Monaten Gratis-Testing profitieren! Der Testrabatt von CHF 100.– gilt für 
+                einen Zeitraum von maximal zwei aufeinanderfolgenden Abrechnungsperioden von jeweils einem Monat. Der Zeitraum 
+                startet mit dem ersten erfolgreichen Release.</p>
+
+            <template id="thank-you-message-template">
+                <div id="thank-you-message">
+                    <h2>Yes! Bald geht's los:</h2>
+                    <p>Deploio ist aktuell noch in Beta. Gerne legen wir dir einen Zugang an. Du erhältst bald eine Mail von uns. Happy coding!</p>
+                </div>
+            </template>
+        </section>
+    </div>
+
+    <section class="section-support full-width">
+        <div class="reduced-width support-text text-center column">
+            <h2>Wieso Deploio perfekt ist für die Schweiz?</h2>
+            <p>
+                Deploio ist echte Schweizer Qualität und zu 100% in
+                CH–Eigentum. Für Entwickler und Firmen, die
+                Präzision, Sicherheit und Konformität suchen – mit
+                Root Server im selben Netz und 24/7 Support.
+            </p>
+        </div>
+    </section>
+</article>
+<footer class="text-dim">
+    <div class="footer-top bg-primary">
+        <div class="columns reduced-width">
+            <div class="column">
+                <h3>Support</h3>
+                <ul>
+                    <li>
+                        <a href="https://status.nine.ch/">Status</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.nine.ch/de/docs/category/deploio"
+                        >Documentation</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://join.slack.com/t/deploiocommunity/shared_invite/zt-20tb3k93m-O4NEUs0RjZYGQNQoih8zkA"
+                        >Slack Community</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://github.com/ninech/deploio-examples"
+                        >Github Examples</a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://docs.nine.ch/de/docs/deplo-io/deploio-pricing">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Contact</h3>
+                <ul>
+                    <li class="line-height-1">
+                        Nine Internet Solutions AG<br>
+                        Badenerstrasse 47<br>
+                        8004 Zürich<br>
+                        Schweiz<br>
+                    </li>
+                    <li>
+                        <a href="mailto:info@nine.ch">info@nine.ch</a>
+                    </li>
+                    <li><a href="tel:+41446374040">+41 44 637 40 40</a></li>
+                </ul>
+            </div>
+            <div class="column footer-certifications">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>
+                        <a href="#"
+                        ><img
+                                class="footer-certificate"
+                                src="assets/images/Co2_Certificate.svg"
+                                alt="co2 certificate"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.nine.ch/hubfs/2022_ISO%2027001.pdf"
+                        ><img
+                                class="footer-certificate"
+                                src="assets/images/2013.png"
+                                alt="2013 certificate"
+                        /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.nine.ch/hubfs/ISO%209001%20-%202022.pdf"
+                        ><img
+                                class="footer-certificate"
+                                src="assets/images/2015.png"
+                                alt="2015 certificate"
+                        /></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column footer-socials">
+                <h3>Get Social</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/deploioch/">
+                            <img
+                                    src="assets/images/socials/facebook.svg"
+                                    alt="deplo.io facebook"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/deploio/">
+                            <img
+                                    src="assets/images/socials/instagram.svg"
+                                    alt="deplo.io instagram"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/company/deploio">
+                            <img
+                                    src="assets/images/socials/linkedin.svg"
+                                    alt="deplo.io linkedin"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.reddit.com/user/deploio">
+                            <img
+                                    src="assets/images/socials/reddit.svg"
+                                    alt="deplo.io reddit"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/deplo_io">
+                            <img
+                                    src="assets/images/socials/twitter.svg"
+                                    alt="deplo.io twitter"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="column footer-providers">
+                <h3>Service Provided By</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.nine.ch">
+                            <img
+                                    src="assets/images/nine-Logo.png"
+                                    alt="nine"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.renuo.ch/de">
+                            <img
+                                    src="assets/images/Renuo-Logo.png"
+                                    alt="renuo"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom bg-secondary">
+        <div class="reduced-width columns">
+            <div class="column center copyright">
+                Copyright © 2024 Nine Internet Solutions AG
+            </div>
+            <div class="column center">
+            <a href="https://www.swissmadesoftware.org/home.html">
+                <img src="assets/images/swissmadesoftware_hosting.png" alt="swiss hosting" class="swiss-hosting">
+            </a>
+            </div>
+            <div class="column">
+                <a
+                        href="https://docs.nine.ch/de/docs/legal-documents/general-terms-and-conditions"
+                >Terms & Conditions</a
+                >
+                <a href="https://www.nine.ch/de/privacy-policy"
+                >Privacy policy</a
+                >
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
 </html>

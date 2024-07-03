@@ -29,7 +29,7 @@ export const SubBlock = ({ segment, openByDefault = false }: SubBlockProps) => {
         })}
       >
         <div className="flex items-center justify-between px-4 py-1">
-          <h4 className="font-inter-tight text-sm font-medium">
+          <h4 className="font-montserrat text-sm font-medium">
             {segment.label}
           </h4>
           <Button

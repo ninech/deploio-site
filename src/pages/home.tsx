@@ -5,7 +5,7 @@ import { Container } from "components/ui/wrappers";
 export const Home = () => {
   return (
     <Container>
-      <div className="flex flex-col gap-5 md:p-5 lg:flex-row">
+      <div className="flex flex-col gap-5 p-[1rem] lg:flex-row">
         <div
           className="flex flex-col gap-5 p-5 md:p-0 lg:w-4/12"
           aria-label="categories"

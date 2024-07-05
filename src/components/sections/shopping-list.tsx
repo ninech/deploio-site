@@ -59,7 +59,7 @@ export const ShoppingList = () => {
 
   return (
     <section className="border-nine-gray-200 sm:rounded-3xl md:border relative overflow-hidden">
-      <img src="/images/wave.svg" alt="wave" className="absolute w-[251%] z-[0] max-w-[9999%] top-[-8rem] left-[-140%]" />
+      <img src="/images/wave.svg" alt="wave" className="absolute w-[251%] z-[0] pricing-calculator-wave top-[-8rem] left-[-140%]" />
       <div className="flex flex-col gap-4 border-b border-nine-gray-200 p-4 last:border-b-0 sm:gap-5 sm:rounded-t-3xl sm:p-5 md:gap-10 md:bg-nine-tertiary md:p-10 z-5">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <h1

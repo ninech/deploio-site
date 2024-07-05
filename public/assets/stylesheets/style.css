@@ -478,4 +478,7 @@ hr.pretty-hr {
   transform: translate(-50%, 0);
   width: 90%; }
 
+.pricing-calculator-wave {
+  max-width: 99999rem !important; }
+
 /*# sourceMappingURL=style.css.map */

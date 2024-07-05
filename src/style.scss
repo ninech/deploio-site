@@ -261,12 +261,12 @@ footer {
       flex: 1;
     }
 
-    width: 200%;
-    height: 100%;
-    background: url("../images/deploio2_wave_logo.svg") no-repeat;
-    background-position-y: -14rem;
-    margin-top: -3rem;
-    background-size: 100%;
+    width: 246%;
+    height: 159%;
+    background: url(../images/deploio2_wave_logo.svg) no-repeat;
+    background-position-y: -7rem;
+    margin-top: -15rem;
+    background-size: 79%;
     pointer-events: none;
   }
 }
@@ -610,12 +610,20 @@ table.comparison {
     }
 
     .hosted-on-deploio-logo {
-      width: 200%;
-      height: 20rem;
-      margin: 0 !important;
-      margin-top: -7rem !important;
-      background-size: 80%;
       background-position-x: 20rem;
+      background-size: 80%;
+      height: 20rem;
+      margin-top: -7rem !important;
+      margin: 0 !important;
+      width: 200%;
+
+      background-position-y: -7rem;
+      background-size: 79%;
+      background: url(../images/deploio2_wave_logo.svg) no-repeat;
+      height: 159%;
+      margin-top: -15rem;
+      pointer-events: none;
+      width: 246%;
     }
   }
 

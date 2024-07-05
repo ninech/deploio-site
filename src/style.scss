@@ -349,10 +349,14 @@ table.comparison {
 
   .table-logo {
     max-height: 5rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 
   th {
     color: $text-light;
+    padding: 1rem;
   }
 
   thead {
@@ -551,6 +555,10 @@ table.comparison {
     width: 100%;
   }
 
+  hr.pretty-hr {
+    margin-top: 2rem;
+  }
+
   h1 {
     text-align: center;
   }
@@ -600,8 +608,6 @@ table.comparison {
   }
 
   .section-certificate {
-    margin-bottom: -2rem;
-
     .certificate {
       margin-top: 2rem;
       margin-left: -2rem;

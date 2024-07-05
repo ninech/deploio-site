@@ -235,9 +235,13 @@ table.comparison {
   table.comparison-desktop {
     display: block; }
   table.comparison .table-logo {
-    max-height: 5rem; }
+    max-height: 5rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0); }
   table.comparison th {
-    color: #fff; }
+    color: #fff;
+    padding: 1rem; }
   table.comparison thead {
     color: #1d1f4f; }
   table.comparison tbody th {
@@ -379,6 +383,9 @@ table.comparison {
   .video {
     width: 100%; }
 
+  hr.pretty-hr {
+    margin-top: 2rem; }
+
   h1 {
     text-align: center; }
 
@@ -410,27 +417,25 @@ table.comparison {
     color: #1d1f4f;
     border-radius: 0; }
 
-  .section-certificate {
-    margin-bottom: -2rem; }
-    .section-certificate .certificate {
-      margin-top: 2rem;
-      margin-left: -2rem;
-      border-radius: 0;
-      padding: 1rem; }
-    .section-certificate .hosted-on-deploio-logo {
-      background-position-x: 20rem;
-      background-size: 80%;
-      height: 20rem;
-      margin-top: -7rem !important;
-      margin: 0 !important;
-      width: 200%;
-      background-position-y: -7rem;
-      background-size: 79%;
-      background: url(../images/deploio2_wave_logo.svg) no-repeat;
-      height: 159%;
-      margin-top: -15rem;
-      pointer-events: none;
-      width: 246%; }
+  .section-certificate .certificate {
+    margin-top: 2rem;
+    margin-left: -2rem;
+    border-radius: 0;
+    padding: 1rem; }
+  .section-certificate .hosted-on-deploio-logo {
+    background-position-x: 20rem;
+    background-size: 80%;
+    height: 20rem;
+    margin-top: -7rem !important;
+    margin: 0 !important;
+    width: 200%;
+    background-position-y: -7rem;
+    background-size: 79%;
+    background: url(../images/deploio2_wave_logo.svg) no-repeat;
+    height: 159%;
+    margin-top: -15rem;
+    pointer-events: none;
+    width: 246%; }
 
   table.comparison-mobile {
     display: block; }

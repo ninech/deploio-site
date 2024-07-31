@@ -572,5 +572,21 @@ table.comparison .check::after {
     margin-bottom: 1rem;
   }
 }
+.pricing-calculator-wrapper {
+  border: none;
+  width: 100%;
+  height: 50rem;
+}
+
+hr.pretty-hr {
+  background: #1d1f4f;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  height: 0.7rem !important;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, 0);
+  width: 90%;
+}
 
 /*# sourceMappingURL=style.css.map */

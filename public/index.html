@@ -348,6 +348,17 @@
           <iframe id="calculator-iframe" allow="clipboard-read; clipboard-write" class="pricing-calculator-wrapper" src="https://pricing-calculator-deploio.e1b591d.deploio.app"></iframe>
         </section>
 
+        <script>
+          const iframe = document.querySelector("#calculator-iframe");
+
+          window.addEventListener('message', function(e) {
+            const message = e.data;
+
+            iframe.style.height = message.height + 'px';
+            iframe.style.width = message.width + 'px';
+          } , false);
+        </script>
+
         <section class="section-comparison reduced-width">
             <h2 class="seo">Comparison table</h2>
             <div>
